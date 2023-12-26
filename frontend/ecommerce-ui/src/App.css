@@ -1,0 +1,86 @@
+.product-grid {
+  margin-top: 40px;
+}
+
+.image-container {
+  height: auto;
+  width: 272px;
+  overflow: hidden;
+
+}
+
+.image-container img {
+  width: 80%; /* Make the image fill the container width */
+  height: 100%; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+
+
+.logo-styles {
+  height: 10;
+  width: 10;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.login-signup-btn {
+  color: rgb(255, 255, 255);
+  padding: 13px;
+  border-radius: 5px; /* Add rounded corners if desired */
+  margin-right: 5px;
+}
+
+.login-signup-btn:hover {
+  background-color: #ffffff; /* Change color on hover */
+  color: black;
+}
+
+.img-carousel{
+  max-width: 100%; /* Ensures images do not exceed their container width */
+  height: auto; /* Maintains aspect ratio during resizing */
+  display: block; /* Removes extra space below inline images */
+  margin: 0 auto; /* Center-aligns images within their container */
+}
+
+.cart-card-container {
+  margin: 15px;
+}
+
+.cart-card-item {
+  padding: 10px;
+  margin: 5px;
+}
+
+.cart-subtotal {
+  margin: 10px;
+  padding: 10px;
+  text-align: right;
+}
+
+.order-card-main {
+  margin: 10px;
+  padding: 10px;
+}
+
+.order-overview-details {
+  padding: 10px;
+  margin: 10px;
+}
+
+.orders-item {
+  margin: 10px;
+  padding: 10px;
+}
+
+.order-overview-details {
+  margin: 10px;
+  padding: 10px;
+}
+
+.product-thumbnail {
+  width: 400px;
+  height: 400px;
+}

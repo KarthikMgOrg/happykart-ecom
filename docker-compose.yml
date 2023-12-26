@@ -1,0 +1,87 @@
+version: '3.8'
+
+services: 
+
+  #mongodb
+  # mongo-db:
+  #   image: mongo:latest
+  #   container_name: mongodb
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - app-network
+  #   volumes:
+  #     - ./db/:/data/db
+  #customer
+  customer:
+    build:
+      context: ./customer
+      dockerfile: Dockerfile
+    container_name: customer
+    ports:
+      - "3000:3000"
+    restart: always
+    # depends_on:
+    #   - mongo-db
+    networks:
+      - app-network
+    env_file:
+      - ./customer/.env
+    volumes:
+      - .:/app/
+      - /app/customer/node_modules
+  #products
+  products:
+    build:
+      context: ./products
+      dockerfile: Dockerfile
+    container_name: products
+    ports:
+      - "3001:3001"
+    restart: always
+    # depends_on:
+    #   - mongo-db
+    networks:
+      - app-network
+    env_file:
+      - ./products/.env
+    volumes:
+      - .:/app
+      - /app/products/node_modules
+
+  #shopping
+  shopping:
+    build:
+      context: ./products
+      dockerfile: Dockerfile
+    container_name: shopping
+    ports:
+      - "3002:3002"
+    restart: always
+    # depends_on:
+    #   - mongo-db
+    networks:
+      - app-network
+    env_file:
+      - ./shopping/.env
+    volumes:
+      - .:/app
+      - /app/shopping/node_modules
+
+  #NGINX reverse proxy service
+  nginx-proxy:
+    build:
+      dockerfile: Dockerfile
+      context: ./proxy
+    depends_on:
+      - customer
+      - products
+      - shopping
+    ports:
+      - 80:80
+    networks:
+      - app-network
+
+networks:
+  app-network:  # Define the network
+    driver: bridge
