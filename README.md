@@ -2,7 +2,7 @@
 
 Welcome to HappyKart, a cutting-edge e-commerce platform powered by Node.js and Express. Follow these simple steps to run the application locally on your machine.
 
-Read the Design Document: [SDD](https://docs.google.com/document/d/13T2Ht091cAIbXjRhRk0eOGtR7Fdfyk7c5S8DmN3gBFc/edit)
+Here is the [Design Document](https://docs.google.com/document/d/13T2Ht091cAIbXjRhRk0eOGtR7Fdfyk7c5S8DmN3gBFc/edit)
 
 ## Prerequisites
 
