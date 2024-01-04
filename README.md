@@ -26,21 +26,21 @@ Make sure you have the following installed on your machine:
 2. ### Launch the Microservices
    
       #### Customer
-         ``` cd customer
-         ``` npm install
-         ``` npm run start
+         ``` cd customer```
+         ``` npm install```
+         ``` npm run start```
       #### Products
-         ``` cd products
-         ``` npm install
-         ``` npm run start
+         ``` cd products```
+         ``` npm install```
+         ``` npm run start```
       #### Shopping
-         ``` cd shopping
-         ``` npm install
-         ``` npm run start
+         ``` cd shopping```
+         ``` npm install```
+         ``` npm run start```
       #### UI
-         ``` cd frontend/ecommerce-ui
-         ``` npm install
-         ``` npm run start
+         ``` cd frontend/ecommerce-ui```
+         ``` npm install```
+         ``` npm run start```
    
 3. ### Database Configuration
    1. Ensure you have MongoDB installed on your machine.
