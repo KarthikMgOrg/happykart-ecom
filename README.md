@@ -22,17 +22,29 @@ Make sure you have the following installed on your machine:
    ```
    git clone https://github.com/your-username/happykart.git
    cd happykart
-   npm install
    ```
-2. ### Set up environment variables:
-   Create a .env file in the root directory and provide the necessary environment variables. You can use the .env.example file as a reference.
+2. ### Launch the Microservices
+   
+      #### Customer
+         ``` cd customer
+         ``` npm install
+         ``` npm run start
+      #### Products
+         ``` cd products
+         ``` npm install
+         ``` npm run start
+      #### Shopping
+         ``` cd shopping
+         ``` npm install
+         ``` npm run start
+      #### UI
+         ``` cd frontend/ecommerce-ui
+         ``` npm install
+         ``` npm run start
    
 3. ### Database Configuration
    1. Ensure you have MongoDB installed on your machine.
    2. Update the database configuration in the .env file.
-      
-## Running the Application
-```npm run start```
 
 ## Contributing
 We welcome contributions! If you find any issues or have improvements to suggest, please open an issue or submit a pull request.
